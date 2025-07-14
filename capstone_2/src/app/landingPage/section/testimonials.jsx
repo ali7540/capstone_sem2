@@ -8,7 +8,7 @@ const testimonials = [
     review:
       "I’ve always struggled with sticking to a budget, but Budgetify AI made it ridiculously easy. Just two months, I reduced my monthly expenses by 15% and saved enough to finally start investing!",
   },
-  {
+  { 
     name: "Bessie Cooper",
     title: "Software Tester",
     image: "https://i.pravatar.cc/100?img=2",

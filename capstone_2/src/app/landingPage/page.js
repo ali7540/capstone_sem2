@@ -6,8 +6,7 @@ import Testimonials from "./section/testimonials";
 
 const landingPage = () => {
   return (
-    <div style={{backGround:"red"}}>
-      
+    <div className='w-full'>
       <Hero/>
       <Features/>
       <Pricing/>
