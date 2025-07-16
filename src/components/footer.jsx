@@ -1,4 +1,4 @@
-// import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -63,10 +63,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Social Media</h4>
             <ul className="space-y-3 text-gray-300">
-              <li className="flex items-center gap-2"> Facebook</li>
-              <li className="flex items-center gap-2"> LinkedIn</li>
-              <li className="flex items-center gap-2"> Twitter</li>
-              <li className="flex items-center gap-2"> Instagram</li>
+              <li className="flex items-center gap-2"><FaFacebookF/> Facebook</li>
+              <li className="flex items-center gap-2"><FaLinkedinIn/> LinkedIn</li>
+              <li className="flex items-center gap-2"><FaTwitter/> Twitter</li>
+              <li className="flex items-center gap-2"><FaInstagram/> Instagram</li>
             </ul>
           </div>
         </div>
