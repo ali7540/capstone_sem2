@@ -41,7 +41,7 @@ export default function SignupForm() {
             <input
               name="name"
               type="text"
-              placeholder="John Doe"
+              placeholder="Your Name"
               required
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             />

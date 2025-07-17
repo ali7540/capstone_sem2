@@ -24,7 +24,7 @@ export async function signUpWithEmail(formData) {
     secure: true,
   });
 
-  redirect("/account");
+  redirect("/dashboard");
 }
 
 

@@ -25,3 +25,65 @@ const hero = () => {
 };
 
 export default hero;
+
+
+// components/Hero.jsx
+// "use client";
+
+// import Image from "next/image";
+
+// export default function Hero() {
+//   return (
+//     <section className="bg-[#E8DAF9] flex flex-col items-center justify-center min-h-screen px-4 md:px-20 text-center">
+//       {/* Heading */}
+//       <h1
+//         className="
+//           font-bold text-black 
+//           text-4xl sm:text-5xl md:text-7xl lg:text-8xl 
+         
+//           max-w-3xl
+//         "
+//       >
+//         Control Your Money,<br className="hidden md:block" />
+//          Unlock Your Future!
+//       </h1>
+
+//       {/* Sub‑heading */}
+//       <p className="mt-4 text-base sm:text-lg md:text-xl text-black max-w-2xl">
+//         Manage your budget, track expenses, invest wisely, and achieve your
+//         financial goals—all in one intuitive app.
+//       </p>
+
+//       {/* CTA Button */}
+//       <button
+//         className="
+//           mt-8 px-8 py-3 rounded-full 
+//           bg-gradient-to-r from-purple-500 to-indigo-500
+//           text-white font-semibold
+//           hover:opacity-90 transition
+//           text-sm sm:text-base
+//         "
+//       >
+//         Contact Us
+//       </button>
+
+//       {/* Dashboard Preview Image */}
+//       <div
+//         className="
+//           mt-16 w-full max-w-4xl 
+//           aspect-[4/3]  /* keep 4:3 ratio */
+//           overflow-hidden rounded-3xl
+//         "
+//       >
+//         <Image
+//           src="/assets/dashboard.png"
+//           alt="Dashboard preview"
+//           width={1200}
+//           height={900}
+//           className="object-cover w-full h-full"
+//           priority
+//         />
+//       </div>
+//     </section>
+//   );
+// }
