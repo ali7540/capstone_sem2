@@ -4,6 +4,7 @@ import { Bell, Search, Menu } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { User } from "lucide-react"
 // import { useAuth } from "@/lib/auth-context"
 
 export default function DashboardHeader({ toggleSidebar, user }) {
@@ -39,13 +40,8 @@ export default function DashboardHeader({ toggleSidebar, user }) {
         </Button>
 
         <div className="flex items-center gap-2">
-          <Image
-            src="/placeholder.svg?height=32&width=32"
-            width={32}
-            height={32}
-            alt="User profile picture"
-            className="rounded-full"
-          />
+            <User className="w-8 h-8 rounded-full bg-muted p-1 text-muted-foreground" />
+
           {/* alt={`${user?.name || "User"} profile picture`} */}
           <div className="hidden md:block">
             <p className="text-sm font-medium">{user?.name || "Guest User"}</p>

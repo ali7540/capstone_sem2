@@ -44,17 +44,16 @@ export default function DashboardSidebar({ isOpen, activeTab, setActiveTab }) {
       className={`
         fixed md:relative top-0 left-0 z-40 
         bg-background border-r transition-all duration-300 ease-in-out
-        h-screen flex flex-col w-64
+        h-screen flex flex-col w-64 
         ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
       `}
       role="navigation"
       aria-label="Dashboard navigation"
     >
-      <div className="p-4 border-b">
+      <div className="p-4 border-b bg-[#E8D9F9]/50 pl-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded gradient-bg flex items-center justify-center text-white font-bold">
-            F
-          </div>
+                 <div className="w-6 h-6 bg-violet-500 rounded-sm rotate-45" />
+
           <span className="text-xl font-bold">BudgetWise</span>
         </Link>
       </div>

@@ -3,14 +3,14 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/f
 export default function Footer() {
   return (
     <footer className="bg-[#001F4A] text-white py-20 px-6 relative overflow-hidden">
-      <div className="inset-0 flex justify-center items-center text-[10rem] font-bold text-white/5 select-none">
+      <div className="inset-0 flex justify-center items-center text-6xl md:text-[10rem] font-bold text-white/5 select-none">
         BudgetWise
       </div>
 
       <div className="relative mt-20 z-10 max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-16">
         <div className="flex-1">
           <h2 className="text-3xl font-bold mb-6">Subscribe Our Newsletter</h2>
-          <form className="flex items-center bg-white rounded-full overflow-hidden max-w-md">
+          <form className="flex items-center bg-white rounded-full overflow-hidden py-1 px-2 max-w-md">
             <input
               type="email"
               placeholder="Email Address"
@@ -18,7 +18,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 px-6 py-3 text-white font-semibold rounded-full hover:opacity-90 transition"
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 px-6 py-3 w-auto text-white font-semibold rounded-full hover:opacity-90 transition"
             >
               Submit Now
             </button>

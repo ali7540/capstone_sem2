@@ -49,7 +49,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, User } from "lucide-react";
 import { getLoggedInUser } from "@/lib/server/appwrite";
 import {
   Sheet,
@@ -108,16 +108,12 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-4 ml-4">
         {user ? (
           <>
-            <Image
-              src="/placeholder.svg?height=32&width=32"
-              alt="User"
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
+            {" "}
+            <Link className="flex bg-white/20 border border-white/30 rounded-full px-3 py-1 shadow-sm justify-center items-center gap-2" href="/account">
+              <User className="w-8 h-8 rounded-full bg-muted p-1 text-muted-foreground" />
             <span className="text-sm font-medium text-slate-800">
               {user.name}
-            </span>
+            </span> </Link>
           </>
         ) : (
           <Link href="/login">
@@ -154,13 +150,7 @@ export default function Navbar() {
 
               {user ? (
                 <div className="flex items-center gap-2 mt-4">
-                  <Image
-                    src="/placeholder.svg?height=32&width=32"
-                    alt="User"
-                    width={32}
-                    height={32}
-                    className="rounded-full"
-                  />
+                  <User className="w-8 h-8 rounded-full bg-muted p-1 text-muted-foreground" />
                   <span className="text-sm font-medium text-slate-800">
                     {user.name}
                   </span>

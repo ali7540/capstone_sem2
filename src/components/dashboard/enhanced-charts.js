@@ -178,11 +178,15 @@
 //   )
 // }
 
+"use client";
 
-
-"use client"
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   BarChart,
   Bar,
@@ -199,15 +203,21 @@ import {
   RadialBarChart,
   RadialBar,
   PolarAngleAxis,
-} from "recharts"
-import { formatCurrency } from "@/lib/utils"
+} from "recharts";
+import { formatCurrency } from "@/lib/utils";
 
 export default function EnhancedCharts({ categories, expenses, colorPalette }) {
   const categoryData = categories.map((category) => {
-    const categoryExpenses = expenses.filter((expense) => expense.categoryId === category.$id)
-    const spent = categoryExpenses.reduce((sum, expense) => sum + expense.amount, 0)
-    const remaining = category.budget - spent
-    const percentSpent = category.budget > 0 ? (spent / category.budget) * 100 : 0
+    const categoryExpenses = expenses.filter(
+      (expense) => expense.categoryId === category.$id
+    );
+    const spent = categoryExpenses.reduce(
+      (sum, expense) => sum + expense.amount,
+      0
+    );
+    const remaining = category.budget - spent;
+    const percentSpent =
+      category.budget > 0 ? (spent / category.budget) * 100 : 0;
 
     return {
       name: category.name,
@@ -216,8 +226,8 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
       remaining: Math.max(0, remaining),
       percentSpent: Number(percentSpent.toFixed(2)),
       color: category.color,
-    }
-  })
+    };
+  });
 
   const monthlyData = [
     { month: "Jan", spending: 2400, budget: 3000 },
@@ -226,14 +236,14 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
     { month: "Apr", spending: 3200, budget: 3000 },
     { month: "May", spending: 2900, budget: 3000 },
     { month: "Jun", spending: 2600, budget: 3000 },
-  ]
+  ];
 
   const radialData = categoryData.map((item, index) => ({
     ...item,
     fill: colorPalette
       ? Object.values(colorPalette)[index % Object.values(colorPalette).length]
       : item.color,
-  }))
+  }));
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -243,14 +253,16 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
           {payload.map((entry, index) => (
             <p key={index} className="text-sm" style={{ color: entry.color }}>
               {entry.name}:{" "}
-              {typeof entry.value === "number" ? formatCurrency(entry.value) : entry.value}
+              {typeof entry.value === "number"
+                ? formatCurrency(entry.value)
+                : entry.value}
             </p>
           ))}
         </div>
-      )
+      );
     }
-    return null
-  }
+    return null;
+  };
 
   return (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -258,7 +270,9 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
       <Card className="col-span-full lg:col-span-2 animate-fade-in">
         <CardHeader>
           <CardTitle>Budget vs Spending Comparison</CardTitle>
-          <CardDescription>Compare your budget allocations with actual spending</CardDescription>
+          <CardDescription>
+            Compare your budget allocations with actual spending
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-[300px]">
@@ -281,7 +295,9 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
       <Card className="animate-fade-in" style={{ animationDelay: "100ms" }}>
         <CardHeader>
           <CardTitle>Budget Utilization</CardTitle>
-          <CardDescription>Percentage of budget used per category</CardDescription>
+          <CardDescription>
+            Percentage of budget used per category
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-[300px]">
@@ -312,10 +328,15 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
       </Card>
 
       {/* Line Chart: Monthly Spending Trend */}
-      <Card className="col-span-full lg:col-span-2 animate-fade-in" style={{ animationDelay: "200ms" }}>
+      <Card
+        className="col-span-full lg:col-span-2 animate-fade-in"
+        style={{ animationDelay: "200ms" }}
+      >
         <CardHeader>
           <CardTitle>Monthly Spending Trend</CardTitle>
-          <CardDescription>Track your spending patterns over time</CardDescription>
+          <CardDescription>
+            Track your spending patterns over time
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="h-[300px]">
@@ -373,6 +394,5 @@ export default function EnhancedCharts({ categories, expenses, colorPalette }) {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }
-

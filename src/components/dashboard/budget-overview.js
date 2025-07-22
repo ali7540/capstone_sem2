@@ -190,8 +190,8 @@ export default function BudgetOverview({ categories, expenses, colorPalette }) {
             </div>
           </CardContent>
         </Card>
-        {/* 
-        <Card className="col-span-full md:col-span-1 row-span-2 animate-slide-in-right">
+        
+        {/* <Card className="col-span-full md:col-span-1 row-span-2 animate-slide-in-right">
           <CardHeader>
             <CardTitle>Spending Distribution</CardTitle>
             <CardDescription>Where your money is going</CardDescription>
@@ -245,8 +245,8 @@ export default function BudgetOverview({ categories, expenses, colorPalette }) {
               )}
             </div>
           </CardContent>
-        </Card> */}
-
+        </Card>  */}
+{/* 
         <Card className="col-span-full md:col-span-1 row-span-2 animate-slide-in-right">
           <CardHeader>
             <CardTitle>Spending Distribution</CardTitle>
@@ -292,7 +292,7 @@ export default function BudgetOverview({ categories, expenses, colorPalette }) {
               )}
             </div>
           </CardContent>
-        </Card>
+        </Card> */}
 
         <Card className="animate-scale-in" style={{ animationDelay: "200ms" }}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
