@@ -6,8 +6,6 @@ import {
   CreditCard,
   BarChart3,
   RefreshCw,
-  Settings,
-  HelpCircle,
   LogOut,
 } from "lucide-react";
 // import { logout } from "@/lib/client/actions/auth.js";
@@ -87,31 +85,7 @@ export default function DashboardSidebar({ isOpen, activeTab, setActiveTab }) {
           </ul>
         </div>
 
-        <div>
-          <p className="text-xs font-semibold text-muted-foreground uppercase mb-2 px-2">
-            Settings
-          </p>
-          <ul className="space-y-1">
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-3 py-3 rounded-md text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors duration-200 touch-manipulation"
-              >
-                <Settings className="h-5 w-5" />
-                Settings
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="#"
-                className="flex items-center gap-3 px-3 py-3 rounded-md text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors duration-200 touch-manipulation"
-              >
-                <HelpCircle className="h-5 w-5" />
-                Help & Support
-              </Link>
-            </li>
-          </ul>
-        </div>
+
       </nav>
 
       <div className="p-4 border-t">
